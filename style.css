@@ -1,0 +1,97 @@
+/* margin in the body tag removes the browsers default edge around the screen */
+body {
+    background-color: rgb(205, 205, 205);
+    margin: 0px;
+}
+
+/* nav is flex container and padding adds space around the text and logo */
+nav {
+    background-color: white;
+    padding: 38px 142px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbarLogo {
+    width: 129px;
+}
+
+/* this targets all the a tags inside the div with an id of navLinkWrapper */
+#navLinkWrapper > a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px 14px;
+}
+
+
+/* navbar hover dropdown list */
+.navItem {
+    position: relative;
+    display: inline-block;
+}
+
+.navDropdown {
+    position: absolute;
+    background-color: black;
+    display: none;
+    padding: 20px;
+}
+
+.navDropdown a {
+    color: white;
+    text-decoration: none;
+}
+
+.navItem:hover .navDropdown {
+    display: block;
+}
+
+
+
+
+
+/* hide the hamburder menu when screen is wider than 1200px */
+#hamburgerMenu {
+    display: none;
+    margin: 0;
+}
+
+
+#skinnyBar {
+    width: 100vw;
+    background-color: rgb(133, 133, 133);
+    margin: 0;
+    padding: 10px 50px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+.highlight {
+    background-color: yellow;
+    text-decoration: line-through;
+}
+
+
+
+/* media query changes some properties when the screen is smaller than 1200px wide */
+@media (max-width: 1200px) {
+    
+    nav {
+        padding: 14px 40px;
+    }
+
+    #navbarLogo {
+        width: 80px;
+    }
+
+    #navLinkWrapper {
+        display: none;
+    }
+
+    #hamburgerMenu {
+        display: block;
+    }
+
+}
